@@ -1,0 +1,21 @@
+﻿<mahapps:MetroWindow x:Class="WpfShowInputAsync.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mahapps="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:WpfShowInputAsync"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+                      WindowStartupLocation="CenterScreen" ContentRendered="MetroWindow_ContentRendered">
+    <Grid Background="LightBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" x:Name="butMainWindow" Content="Button in main window"
+                VerticalAlignment="Center" Margin="5" Click="butMainWindow_Click" />
+        <Frame Grid.Column="1" x:Name="pageWithButton" Source="PageAdditional.xaml" 
+               NavigationUIVisibility="Hidden" />
+    </Grid>
+</mahapps:MetroWindow>
